@@ -88,3 +88,13 @@ c will always be equal to either a or b.
 a will never equal b.
 a, b, and c will always be integers
 '''
+def swap(a, b, c):
+    return (a+b+c)-(2*c)
+
+print(swap(27, 31, 31))
+
+
+def swap(a, b, c):
+    return a if c== b else b
+
+print(swap(27, 31, 31))
