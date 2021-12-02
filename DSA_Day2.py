@@ -161,11 +161,104 @@ HP.get_title() ➞ "Title: Harry Potter"
 HP.get_author() ➞ "Author: J.K. Rowling"
 '''
 
-class book:
-    # constructor (self,title,author)
-    # get title :- "Title: " + the instance title.
-    #get author
+# class book:
+#     # constructor (self,title,author)
+#     # get title :- "Title: " + the instance title.
+#     #get author
 
-PP = book("Pride and Prejudice" ,"Jane Austen" )
-H = 
-WP = 
+# PP = book("Pride and Prejudice" ,"Jane Austen" )
+# H = 
+# WP = 
+
+
+
+'''
+
+
+Create a class that takes the following four arguments for a particular football player:
+
+name
+age
+height
+weight
+Also, create three functions for the class that returns the following strings:
+
+get_age() returns "name is age age"
+get_height() returns "name is heightcm"
+get_weight() returns "name weighs weightkg"
+Examples
+ p1 = player("David Jones", 25, 175, 75)
+
+ p1.get_age() ➞ "David Jones is age 25"
+ p1.get_height() ➞ "David Jones is 175cm"
+ p1.get_weight() ➞ "David Jones weighs 75kg"
+
+
+
+
+
+Create a Person class which will have three properties:
+
+Name
+List of foods they like
+List of foods they hate
+In this class, create the method taste():
+
+It will take in a food name as a string.
+Return {person_name} eats the {food_name}.
+If the food is in the person's like list, add 'and loves it!' to the end.
+If it is in the person's hate list, add 'and hates it!' to the end.
+If it is in neither list, simply add an exclamation mark to the end.
+Examples
+p1 = Person("Sam", ["ice cream"], ["carrots"])
+p1.taste("ice cream") ➞ "Sam eats the ice cream and loves it!"
+
+p1.taste("cheese") ➞ "Sam eats the cheese!"
+
+p1.taste("carrots") ➞ "Sam eats the carrots and hates it!"
+
+'''
+
+class Person:
+    def __init__(self,name,like_list = [],hate_list = []):
+        self.name=name
+        self.like_list=like_list
+        self.hate_list=hate_list
+    
+
+    def taste(self,item):
+        if item in self.like_list:
+            return f"{self.name} Eat {item} and Loves it!"
+        elif item in self.hate_list:
+            return f"{self.name} Eat {item} and Hate it!"
+        else:
+            return f"{self.name} Eat the {item}!"
+
+p=Person('Sam',['ice cream','cake'],['carrot'])
+print(p.taste('cake'))
+print(p.taste('ice cream'))
+print(p.taste('carrot'))
+print(p.taste('cheese'))
+
+
+class person:
+    def __init__(self,name,like_list,hate_list):
+        self.name = name
+        self.like_list = like_list
+        self.hate_list = hate_list
+
+    def taste(self,item):
+        if item in self.like_list:
+            print(self.name + " Likes " + item + "and loves it!")
+        elif item in self.hate_list:
+            print(self.name + " Hates " + item + "and hates it!")
+        else:
+            print(self.name + item + "!")
+
+
+    
+p1 = person('Peter', ["sandwitch","samosa"], ["carrot"])
+
+p1.taste("sandwitch")
+p1.taste("roti")
+
